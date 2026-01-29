@@ -1,0 +1,171 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+/* ---------- GLOBAL RESET ---------- */
+*,
+*::before,
+*::after {
+  box-sizing: border-box;
+}
+
+/* ---------- ROOT + BODY ---------- */
+html,
+body,
+html,
+body,
+html,
+body,
+#root {
+  min-height: 100%;
+  margin: 0;
+  padding: 0;
+
+  background:
+    radial-gradient(
+      ellipse at top,
+      rgba(59, 130, 246, 0.12),
+      transparent 60%
+    ),
+    radial-gradient(
+      circle at bottom right,
+      rgba(99, 102, 241, 0.12),
+      transparent 60%
+    ),
+    #0b0f14;
+
+  overflow-x: hidden;
+}
+
+
+
+/* ===================== */
+/* ANIMATED BORDER */
+/* ===================== */
+
+.animated-border {
+  position: relative;
+  border-radius: 1rem;
+}
+
+.animated-border::before {
+  content: "";
+  position: absolute;
+  inset: 0;
+  padding: 1px;
+  border-radius: inherit;
+  background: linear-gradient(
+    90deg,
+    #3b82f6,
+    #22d3ee,
+    #a855f7,
+    #3b82f6
+  );
+  background-size: 300% 300%;
+  -webkit-mask:
+    linear-gradient(#000 0 0) content-box,
+    linear-gradient(#000 0 0);
+  -webkit-mask-composite: xor;
+  mask-composite: exclude;
+  opacity: 0;
+  transition: opacity 0.3s ease;
+  pointer-events: none; /* IMPORTANT: only border ignores clicks */
+}
+
+.animated-border:hover::before {
+  opacity: 1;
+  animation: borderMove 3s linear infinite;
+}
+
+@keyframes borderMove {
+  0% { background-position: 0% 50%; }
+  100% { background-position: 100% 50%; }
+}
+
+/* ===================== */
+/* PREMIUM GLOW CARD */
+/* ===================== */
+
+.glow-card {
+  position: relative;
+  border-radius: 1rem;
+  background: rgba(255, 255, 255, 0.05);
+  backdrop-filter: blur(12px);
+  border: 1px solid rgba(255, 255, 255, 0.08);
+  box-shadow:
+    0 0 0 1px rgba(255, 255, 255, 0.03),
+    0 20px 40px rgba(0, 0, 0, 0.5),
+    0 0 30px rgba(56, 189, 248, 0.15);
+  overflow: hidden;
+}
+
+/* Glow animation layer */
+.glow-card::after {
+  content: "";
+  position: absolute;
+  inset: 0;
+  border-radius: inherit;
+  background: linear-gradient(
+    120deg,
+    transparent,
+    rgba(56, 189, 248, 0.6),
+    rgba(99, 102, 241, 0.6),
+    transparent
+  );
+  background-size: 200% 200%;
+  opacity: 0.35;
+  animation: glowMove 6s linear infinite;
+  pointer-events: none; /* IMPORTANT */
+}
+
+@keyframes glowMove {
+  0% { background-position: 0% 50%; }
+  100% { background-position: 200% 50%; }
+}
+
+/* ===================== */
+/* FORM INPUTS */
+/* ===================== */
+
+.input {
+  width: 100%;
+  padding: 0.9rem 1rem;
+  border-radius: 0.75rem;
+  background: rgba(255, 255, 255, 0.06);
+  border: 1px solid rgba(255, 255, 255, 0.14);
+  color: #ffffff;
+  font-size: 0.9rem;
+  outline: none;
+  transition: all 0.25s ease;
+}
+
+.input::placeholder {
+  color: rgba(255, 255, 255, 0.35);
+}
+
+.input:focus {
+  border-color: #38bdf8;
+  background: rgba(255, 255, 255, 0.08);
+  box-shadow:
+    0 0 0 1px rgba(56, 189, 248, 0.4),
+    0 0 20px rgba(56, 189, 248, 0.25);
+}
+
+/* ===================== */
+/* BUTTON */
+/* ===================== */
+
+.btn-primary {
+  padding: 0.6rem 1.6rem;
+  border-radius: 999px;
+  background: linear-gradient(to right, #2563eb, #38bdf8);
+  color: #fff;
+  font-weight: 500;
+  transition: all 0.3s ease;
+}
+
+.btn-primary:hover {
+  transform: translateY(-1px);
+  box-shadow: 0 12px 30px rgba(56, 189, 248, 0.4);
+}
+
