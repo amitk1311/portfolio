@@ -56,23 +56,18 @@ export default function Projects() {
   ];
 
   return (
-    <section
- className="relative z-10 max-w-6xl mx-auto px-6 py-20"
-
->
+    <section className="relative z-10 max-w-6xl mx-auto px-4 sm:px-6 py-12 sm:py-20">
 
       {/* ===================== */}
       {/* HEADER */}
       {/* ===================== */}
-      <h1 className="text-4xl md:text-5xl font-semibold text-white mb-6 relative inline-block">
+      <h1 className="text-3xl sm:text-4xl md:text-5xl font-semibold text-white mb-4 sm:mb-6 relative inline-block">
         Projects
         <span className="absolute -bottom-2 left-0 h-[3px] w-20 bg-gradient-to-r from-blue-400 to-cyan-400 rounded-full"></span>
       </h1>
 
-      <div
-  className="relative mb-14 rounded-2xl border border-white/10 bg-white/5
-             backdrop-blur p-6 shadow-xl shadow-indigo-500/20 overflow-hidden"
->
+      <div className="relative mb-10 sm:mb-14 rounded-2xl border border-white/10 bg-white/5
+             backdrop-blur p-4 sm:p-6 shadow-xl shadow-indigo-500/20 overflow-hidden">
   {/* Accent gradient strip */}
    <span className="absolute left-0 top-0 h-full w-[3px]
                    bg-gradient-to-b from-blue-400 via-cyan-400 to-indigo-500" />
@@ -81,7 +76,7 @@ export default function Projects() {
    <span className="pointer-events-none absolute inset-0 rounded-2xl
                    bg-gradient-to-br from-indigo-500/10 via-transparent to-cyan-500/10" />
 
-   <p className="relative text-gray-300 leading-relaxed">
+   <p className="relative text-gray-300 leading-relaxed text-sm sm:text-base">
     I enjoy building real-world applications that combine
     <span className="text-white font-medium"> clean UI</span>,
     <span className="text-white font-medium"> structured backend logic</span>,
@@ -96,15 +91,15 @@ export default function Projects() {
       {/* ===================== */}
       {/* FEATURED PROJECTS */}
       {/* ===================== */}
-      <h2 className="text-2xl font-semibold text-white mb-8">
+      <h2 className="text-xl sm:text-2xl font-semibold text-white mb-6 sm:mb-8">
         Featured Projects
       </h2>
 
-      <div className="grid md:grid-cols-2 gap-8">
+      <div className="grid sm:grid-cols-1 md:grid-cols-2 gap-6 sm:gap-8">
         {featuredProjects.map((project, i) => (
           <div
             key={i}
-            className="relative bg-white/5 border border-white/10 rounded-2xl p-6 shadow-xl
+            className="relative bg-white/5 border border-white/10 rounded-2xl p-4 sm:p-6 shadow-xl
                        shadow-indigo-500/30 transition-transform duration-300 hover:-translate-y-1"
           >
             {/* Gradient glow overlay */}
@@ -139,16 +134,13 @@ export default function Projects() {
       {/* ===================== */}
       {/* MINI & LEARNING PROJECTS */}
       {/* ===================== */}
-      <div className="mt-20">
-        <h2 className="text-2xl font-semibold text-white mb-4">
+      <div className="mt-12 sm:mt-20">
+        <h2 className="text-xl sm:text-2xl font-semibold text-white mb-4">
           Learning & Mini Projects
         </h2>
 
-        <div
-  className="relative rounded-2xl border border-white/10 bg-white/5
-             backdrop-blur p-6 shadow-xl shadow-cyan-500/20
-             overflow-hidden"
->
+        <div className="relative rounded-2xl border border-white/10 bg-white/5
+             backdrop-blur p-4 sm:p-6 shadow-xl shadow-cyan-500/20 overflow-hidden">
   {/* Left accent glow */}
   <span className="absolute left-0 top-0 h-full w-[3px]
                    bg-gradient-to-b from-cyan-400 via-blue-500 to-indigo-500" />
@@ -175,8 +167,8 @@ export default function Projects() {
       {/* ===================== */}
       {/* CTA */}
       {/* ===================== */}
-      <div className="mt-14 text-center">
-        <p className="text-gray-400 mb-4">
+      <div className="mt-10 sm:mt-14 text-center px-2">
+        <p className="text-gray-400 mb-4 text-sm sm:text-base">
           Explore more projects, experiments, and learning builds on my GitHub.
         </p>
 

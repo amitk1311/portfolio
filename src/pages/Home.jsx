@@ -3,7 +3,7 @@ import Hero from "../components/Hero";
 
 function Home() {
   return (
-    <div className="relative min-h-screen bg-black overflow-hidden">
+    <div className="relative min-h-screen bg-black">
       {/* PARTICLES */}
       <ParticlesBackground />
 

@@ -1,6 +1,4 @@
-import { Routes, Route, useLocation } from "react-router-dom";
-import { AnimatePresence, motion } from "framer-motion";
-import { useEffect } from "react";
+import { useEffect, useRef } from "react";
 
 import Home from "./pages/Home";
 import About from "./pages/About";
@@ -11,89 +9,48 @@ import WhatIDo from "./pages/WhatIDo";
 import Sidebar from "./components/Sidebar";
 import Footer from "./components/Footer";
 
+const SECTION_IDS = ["home", "about", "projects", "what-i-do", "contact"];
+
 export default function App() {
-  const location = useLocation();
+  const scrollContainerRef = useRef(null);
 
-  // 🔒 LOCK SCROLL ONLY ON HOME
   useEffect(() => {
-    if (location.pathname === "/") {
-      document.body.style.overflow = "hidden";
-    } else {
-      document.body.style.overflow = "auto";
-    }
-
+    document.body.style.overflow = "hidden";
     return () => {
-      document.body.style.overflow = "auto";
+      document.body.style.overflow = "";
     };
-  }, [location.pathname]);
+  }, []);
 
   return (
-    <div className="min-h-screen bg-[#0b0f14] text-white overflow-x-hidden">
-      <Sidebar />
+    <div className="min-h-screen bg-[#0b0f14] text-white overflow-x-hidden flex">
+      {/* Fixed sidebar */}
+      <Sidebar scrollContainerRef={scrollContainerRef} sectionIds={SECTION_IDS} />
 
-      <AnimatePresence mode="wait">
-        <Routes location={location} key={location.pathname}>
-          <Route path="/" element={<Home />} />
-
-          <Route
-            path="/about"
-            element={
-              <motion.div
-                initial={{ opacity: 0, y: 40 }}
-                animate={{ opacity: 1, y: 0 }}
-                exit={{ opacity: 0, y: -40 }}
-                transition={{ duration: 0.4, ease: "easeOut" }}
-              >
-                <About />
-              </motion.div>
-            }
-          />
-
-          <Route
-            path="/projects"
-            element={
-              <motion.div
-                initial={{ opacity: 0, y: 40 }}
-                animate={{ opacity: 1, y: 0 }}
-                exit={{ opacity: 0, y: -40 }}
-                transition={{ duration: 0.4, ease: "easeOut" }}
-              >
-                <Projects />
-              </motion.div>
-            }
-          />
-
-          <Route
-            path="/what-i-do"
-            element={
-              <motion.div
-                initial={{ opacity: 0, y: 40 }}
-                animate={{ opacity: 1, y: 0 }}
-                exit={{ opacity: 0, y: -40 }}
-                transition={{ duration: 0.4, ease: "easeOut" }}
-              >
-                <WhatIDo />
-              </motion.div>
-            }
-          />
-
-          <Route
-            path="/contact"
-            element={
-              <motion.div
-                initial={{ opacity: 0, y: 40 }}
-                animate={{ opacity: 1, y: 0 }}
-                exit={{ opacity: 0, y: -40 }}
-                transition={{ duration: 0.4, ease: "easeOut" }}
-              >
-                <Contact />
-              </motion.div>
-            }
-          />
-        </Routes>
-      </AnimatePresence>
-
-      <Footer />
+      {/* Single scrollable content area with scroll snap */}
+      <main
+        ref={scrollContainerRef}
+        className="flex-1 h-screen overflow-y-auto overflow-x-hidden snap-y snap-mandatory scroll-smooth pb-20 md:pb-0"
+        style={{ scrollBehavior: "smooth" }}
+      >
+        <section id="home" className="snap-start snap-always min-h-screen">
+          <Home />
+        </section>
+        <section id="about" className="snap-start min-h-screen">
+          <About />
+        </section>
+        <section id="projects" className="snap-start min-h-screen">
+          <Projects />
+        </section>
+        <section id="what-i-do" className="snap-start min-h-screen">
+          <WhatIDo />
+        </section>
+        <section id="contact" className="snap-start min-h-screen">
+          <Contact />
+        </section>
+        <section id="footer" className="snap-start min-h-[120px] flex items-end justify-center">
+          <Footer />
+        </section>
+      </main>
     </div>
   );
 }

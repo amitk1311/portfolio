@@ -22,31 +22,30 @@ export default function Contact() {
         initial={{ opacity: 0, y: 40 }}
         animate={{ opacity: 1, y: 0 }}
         transition={{ duration: 0.6, ease: "easeOut" }}
-        className="relative z-10 max-w-6xl mx-auto px-6 py-20"
-
+        className="relative z-10 max-w-6xl mx-auto px-4 sm:px-6 py-12 sm:py-20"
       >
         {/* ===================== */}
         {/* CENTERED CONTENT */}
         {/* ===================== */}
-        <div className="max-w-6xl mx-auto px-6 text-gray-200">
+        <div className="max-w-6xl mx-auto px-0 sm:px-6 text-gray-200">
 
           {/* HEADING */}
-          <h1 className="text-4xl md:text-5xl font-semibold text-white mb-4 relative inline-block">
+          <h1 className="text-3xl sm:text-4xl md:text-5xl font-semibold text-white mb-4 relative inline-block">
             Contact
             <span className="absolute -bottom-2 left-0 h-[3px] w-16 bg-gradient-to-r from-blue-400 to-cyan-400 rounded-full"></span>
           </h1>
 
-          <p className="max-w-2xl text-gray-300 leading-relaxed mb-16">
+          <p className="max-w-2xl text-gray-300 leading-relaxed mb-10 sm:mb-16 text-sm sm:text-base">
             Feel free to reach out for opportunities, collaborations, or meaningful
             discussions around software development and technology.
           </p>
 
-          <div className="grid lg:grid-cols-2 gap-14 items-center">
+          <div className="grid grid-cols-1 lg:grid-cols-2 gap-8 sm:gap-14 items-center">
             {/* ===================== */}
             {/* LEFT SIDE */}
             {/* ===================== */}
             <div className="space-y-6">
-              <div className="animated-border glow-card p-6 flex items-center gap-4">
+              <div className="animated-border glow-card p-4 sm:p-6 flex items-center gap-4">
                 <MdEmail className="text-blue-400 text-2xl" />
                 <div>
                   <p className="text-sm text-gray-400">Email</p>
@@ -54,7 +53,7 @@ export default function Contact() {
                 </div>
               </div>
 
-              <div className="animated-border glow-card p-6 flex items-center gap-4">
+              <div className="animated-border glow-card p-4 sm:p-6 flex items-center gap-4">
                 <MdLocationOn className="text-red-400 text-2xl" />
                 <div>
                   <p className="text-sm text-gray-400">Location</p>
@@ -64,7 +63,7 @@ export default function Contact() {
                 </div>
               </div>
 
-              <div className="animated-border glow-card p-6">
+              <div className="animated-border glow-card p-4 sm:p-6">
                 <p className="text-sm text-gray-400 mb-1">Availability</p>
                 <p className="text-green-400 font-medium">
                   Open for roles, internships & collaborations
@@ -102,8 +101,8 @@ export default function Contact() {
             {/* ===================== */}
             {/* RIGHT SIDE — FORM */}
             {/* ===================== */}
-            <div className="animated-border glow-card p-8">
-              <h2 className="text-2xl font-semibold text-white mb-6">
+              <div className="animated-border glow-card p-5 sm:p-8">
+                <h2 className="text-xl sm:text-2xl font-semibold text-white mb-5 sm:mb-6">
                 Send a Message
               </h2>
 

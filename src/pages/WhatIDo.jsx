@@ -1,22 +1,19 @@
 export default function WhatIDo() {
   return (
-    <section
-  className="relative z-10 max-w-6xl mx-auto px-6 py-20"
-
->
+    <section className="relative z-10 max-w-6xl mx-auto px-4 sm:px-6 py-12 sm:py-20">
 
 
       {/* ===================== */}
       {/* PAGE HEADING */}
       {/* ===================== */}
-      <h1 className="text-4xl md:text-5xl font-semibold text-white mb-8 relative inline-block">
+      <h1 className="text-3xl sm:text-4xl md:text-5xl font-semibold text-white mb-6 sm:mb-8 relative inline-block">
         What I Do
         <span className="absolute -bottom-2 left-0 h-[3px] w-16 bg-gradient-to-r from-blue-400 to-cyan-400 rounded-full"></span>
       </h1>
 
       {/* INTRO CARD */}
-      <div className="animated-border glow-card p-6 mb-20">
-        <p className="text-gray-300 leading-relaxed max-w-4xl">
+      <div className="animated-border glow-card p-4 sm:p-6 mb-12 sm:mb-20">
+        <p className="text-gray-300 leading-relaxed max-w-4xl text-sm sm:text-base">
           I build modern, scalable, and user-focused software applications by
           combining strong computer science fundamentals with practical full-stack
           development. My work focuses on clean architecture, performance, and
@@ -27,11 +24,11 @@ export default function WhatIDo() {
       {/* ===================== */}
       {/* CORE CAPABILITIES */}
       {/* ===================== */}
-      <h2 className="text-2xl font-semibold text-white mb-8">
+      <h2 className="text-xl sm:text-2xl font-semibold text-white mb-6 sm:mb-8">
         Core Capabilities
       </h2>
 
-      <div className="grid md:grid-cols-2 gap-8 mb-20">
+      <div className="grid sm:grid-cols-1 md:grid-cols-2 gap-6 sm:gap-8 mb-12 sm:mb-20">
         {[
           {
             title: "Frontend Development",
@@ -73,11 +70,11 @@ export default function WhatIDo() {
       {/* ===================== */}
       {/* HOW I BUILD SOFTWARE */}
       {/* ===================== */}
-      <h2 className="text-2xl font-semibold text-white mb-8">
+      <h2 className="text-xl sm:text-2xl font-semibold text-white mb-6 sm:mb-8">
         How I Build Software
       </h2>
 
-      <div className="grid md:grid-cols-3 gap-8 mb-20">
+      <div className="grid sm:grid-cols-1 md:grid-cols-3 gap-6 sm:gap-8 mb-12 sm:mb-20">
         {[
           {
             title: "Understand the Problem",
@@ -114,12 +111,12 @@ export default function WhatIDo() {
       {/* ===================== */}
       {/* TOOLS & TECHNOLOGIES */}
       {/* ===================== */}
-      <h2 className="text-2xl font-semibold text-white mb-6">
+      <h2 className="text-xl sm:text-2xl font-semibold text-white mb-4 sm:mb-6">
         Tools & Technologies
       </h2>
 
-      <div className="animated-border glow-card p-6 max-w-4xl">
-        <p className="text-gray-300 leading-relaxed text-sm">
+      <div className="animated-border glow-card p-4 sm:p-6 max-w-4xl">
+        <p className="text-gray-300 leading-relaxed text-xs sm:text-sm">
           <span className="text-white font-medium">Languages & Core:</span> JavaScript, Data Structures, OOP  
           <br />
           <span className="text-white font-medium">Frontend:</span> React, Tailwind CSS  

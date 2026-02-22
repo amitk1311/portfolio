@@ -1,20 +1,17 @@
 export default function About() {
   return (
-    <section
-  className="relative z-10 max-w-6xl mx-auto px-6 py-20"
-
->
+    <section className="relative z-10 max-w-6xl mx-auto px-4 sm:px-6 py-12 sm:py-20">
 
 
       {/* ===================== */}
       {/* INTRO SUMMARY */}
       {/* ===================== */}
-      <h1 className="text-4xl md:text-5xl font-semibold text-white mb-10 relative inline-block">
+      <h1 className="text-3xl sm:text-4xl md:text-5xl font-semibold text-white mb-8 sm:mb-10 relative inline-block">
         About Me
         <span className="absolute -bottom-2 left-0 h-[3px] w-16 bg-gradient-to-r from-blue-400 to-cyan-400 rounded-full" />
       </h1>
 
-      <div className="glow-card p-6 mb-16">
+      <div className="glow-card p-4 sm:p-6 mb-10 sm:mb-16">
         <p className="leading-relaxed text-gray-300">
           I am a Computer Science Engineering graduate with a strong foundation
           in Data Structures, Object-Oriented Programming, and full-stack MERN
@@ -26,13 +23,13 @@ export default function About() {
       {/* ===================== */}
       {/* WHAT I’VE WORKED ON */}
       {/* ===================== */}
-      <div className="mb-16">
-        <h2 className="text-2xl font-semibold text-white mb-4">
+      <div className="mb-10 sm:mb-16">
+        <h2 className="text-xl sm:text-2xl font-semibold text-white mb-4">
           What I’ve Worked On
         </h2>
 
-        <div className="glow-card p-6">
-          <p className="text-gray-300 leading-relaxed">
+        <div className="glow-card p-4 sm:p-6">
+          <p className="text-gray-300 leading-relaxed text-sm sm:text-base">
             I have built and deployed multiple real-world projects such as a
             <span className="text-white font-medium"> News App</span>, a
             <span className="text-white font-medium"> Sorting Visualizer</span>,
@@ -50,12 +47,12 @@ export default function About() {
       {/* ===================== */}
       {/* EDUCATION */}
       {/* ===================== */}
-      <div className="mb-16">
-        <h2 className="text-2xl font-semibold text-white mb-4">
+      <div className="mb-10 sm:mb-16">
+        <h2 className="text-xl sm:text-2xl font-semibold text-white mb-4">
           Education
         </h2>
 
-        <div className="glow-card p-6">
+        <div className="glow-card p-4 sm:p-6">
           <p className="text-lg font-semibold text-white">
             Chitkara University, Punjab
           </p>
@@ -77,12 +74,12 @@ export default function About() {
       {/* ===================== */}
       {/* MY STRENGTHS */}
       {/* ===================== */}
-      <div className="mb-20">
-        <h2 className="text-2xl font-semibold text-white mb-6">
+      <div className="mb-12 sm:mb-20">
+        <h2 className="text-xl sm:text-2xl font-semibold text-white mb-6">
           My Strengths
         </h2>
 
-        <div className="grid md:grid-cols-3 gap-6">
+        <div className="grid sm:grid-cols-2 md:grid-cols-3 gap-4 sm:gap-6">
           {[
             {
               title: "How I Think",
@@ -100,7 +97,7 @@ export default function About() {
                 "I work with discipline and consistency, write clean and readable code, test thoroughly, and actively improve through feedback.",
             },
           ].map((item, i) => (
-            <div key={i} className="glow-card p-6">
+            <div key={i} className="glow-card p-4 sm:p-6">
               <h3 className="text-lg font-semibold text-white mb-2">
                 {item.title}
               </h3>
@@ -115,19 +112,19 @@ export default function About() {
       {/* ===================== */}
       {/* TECHNICAL OVERVIEW */}
       {/* ===================== */}
-      <div className="mb-20">
-        <h2 className="text-2xl font-semibold text-white mb-6">
+      <div className="mb-12 sm:mb-20">
+        <h2 className="text-xl sm:text-2xl font-semibold text-white mb-6">
           Technical Overview
         </h2>
 
-        <div className="grid md:grid-cols-4 gap-6">
+        <div className="grid sm:grid-cols-2 md:grid-cols-4 gap-4 sm:gap-6">
           {[
             ["Frontend", "React, Tailwind CSS, component-based architecture, performance optimization."],
             ["Backend", "REST APIs, Node.js, Express, authentication, scalable server logic."],
             ["Databases", "MongoDB, SQL, schema design, CRUD operations, query optimization."],
             ["Tools & Learning", "Git, GitHub, Postman, AI & ML exploration, continuous learning."],
           ].map(([title, text], i) => (
-            <div key={i} className="glow-card p-5">
+            <div key={i} className="glow-card p-4 sm:p-5">
               <h3 className="text-white font-medium mb-2">{title}</h3>
               <p className="text-gray-300 text-sm">{text}</p>
             </div>
@@ -139,11 +136,11 @@ export default function About() {
       {/* PROFESSIONAL FOCUS */}
       {/* ===================== */}
       <div>
-        <h2 className="text-2xl font-semibold text-white mb-4">
+        <h2 className="text-xl sm:text-2xl font-semibold text-white mb-4">
           Professional Focus
         </h2>
 
-        <div className="glow-card p-6">
+        <div className="glow-card p-4 sm:p-6">
           <p className="text-gray-300 leading-relaxed">
             I enjoy working on real-world software systems where I can contribute
             to development, learn from experienced engineers, and improve through
